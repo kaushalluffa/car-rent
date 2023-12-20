@@ -16,7 +16,7 @@ const Navigation = () => {
     dispatch(changeMode());
   }
   return (
-    <Grid container alignItems="center" justifyContent={'space-between'} px={5} py={3}>
+    <Grid container alignItems="center" justifyContent={'space-between'} px={4} py={2}>
       <Grid item>
         <MainLogo />
       </Grid>

@@ -8,15 +8,18 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = () => {
   return (
-    <Grid container flexDirection="column" position={'absolute'} left={0} bottom={0} px={5} py={3}>
+    <Grid container flexDirection="column" position={'relative'} left={0} bottom={0} px={5} py={3} gap={2}>
       <Grid item display="flex" width={'100%'}>
         <Grid item xs={6} display="flex" flexDirection="column" gap={2}>
           <MainLogo />
           <Typography variant="caption">
             Our vision is to provide convenience and help increase your sales business.
           </Typography>
+          <Typography variant="body1" fontWeight="bold">
+            &copy; {new Date().getFullYear()} MORENT. All rights reserved.
+          </Typography>
         </Grid>
-        <Grid item display="flex" xs={6} gap={5}>
+        <Grid item display="flex" xs={6} gap={5} justifyContent="space-between">
           <Grid item gap={3} display="flex" flexDirection="column">
             <Typography variant="body1" fontFamily="bold">
               About
@@ -41,19 +44,6 @@ const Footer: React.FC<FooterProps> = () => {
             <Typography variant="caption">Instagram</Typography>
             <Typography variant="caption">Twitter</Typography>
           </Grid>
-        </Grid>
-      </Grid>
-      <Grid container justifyContent="space-between" alignItems="center">
-        <Typography variant="body1" fontWeight="bold">
-          &copy; {new Date().getFullYear()} MORENT. All rights reserved.
-        </Typography>
-        <Grid item display="flex" alignItems="center" gap={2}>
-          <Typography variant="body1" fontWeight="bold">
-            Privacy & Policy
-          </Typography>
-          <Typography variant="body1" fontWeight="bold">
-            Terms & Condition
-          </Typography>
         </Grid>
       </Grid>
     </Grid>

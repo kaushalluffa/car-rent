@@ -9,6 +9,11 @@ const SearchBar = () => {
       placeholder="Search"
       InputProps={{ startAdornment: <Search />, endAdornment: <TuneIcon /> }}
       fullWidth
+      sx={{
+        '& .MuiInputBase-root': {
+          height: 40,
+        },
+      }}
     />
   );
 };
